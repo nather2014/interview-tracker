@@ -1,0 +1,5 @@
+.env
+backend/interview-tracker
+backups/
+__pycache__/
+*.log

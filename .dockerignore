@@ -1,0 +1,5 @@
+.env
+.git
+backups
+**/__pycache__
+backend/interview-tracker
