@@ -17,7 +17,7 @@ if(!process.env.TEST_REPORT_IDS_FILE)throw Error('Set TEST_REPORT_IDS_FILE to re
   const response=page.waitForResponse(r=>r.url().endsWith('/api/interviews')&&r.request().method()==='POST');
   await form.locator('#publish').click();const posted=await response;assert.equal(posted.status(),201);const data=await posted.json();
   fs.appendFileSync(process.env.TEST_REPORT_IDS_FILE,JSON.stringify({id:data.id,company:marker})+'\n');
-  await page.locator('#notice').filter({hasText:'now published'}).waitFor();
+  await page.locator('#notice').filter({hasText:'Interview saved.'}).waitFor();
   await page.locator('#filters [name="role"] option').filter({hasText:'Accountant '+marker}).waitFor({state:'attached'});
   await page.locator('#filters [name="field"]').selectOption('Finance');await page.locator('#filters [name="role"]').selectOption('Accountant '+marker);
   await page.locator('#result-count').filter({hasText:/^1 interview report$/}).waitFor();

@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS interview (
  role VARCHAR(160) NOT NULL,
  experience VARCHAR(20) NOT NULL,
  interview_type VARCHAR(30) NOT NULL,
- interview_date DATE NOT NULL,
+ interview_date DATE,
  location VARCHAR(120) NOT NULL,
  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP NOT NULL
 );
@@ -23,3 +23,24 @@ CREATE INDEX IF NOT EXISTS question_topic_idx ON question(topic);
 ALTER TABLE interview ADD COLUMN IF NOT EXISTS field VARCHAR(80) NOT NULL DEFAULT '';
 CREATE INDEX IF NOT EXISTS interview_field_idx ON interview(lower(field));
 CREATE INDEX IF NOT EXISTS interview_role_idx ON interview(lower(role));
+
+CREATE TABLE IF NOT EXISTS visitor_presence (
+ visit_day DATE NOT NULL,
+ visitor_id CHAR(64) NOT NULL,
+ last_seen TIMESTAMPTZ NOT NULL,
+ PRIMARY KEY (visit_day, visitor_id)
+);
+
+CREATE EXTENSION IF NOT EXISTS pg_trgm WITH SCHEMA public;
+CREATE OR REPLACE FUNCTION interview_search_matches(query text, document text)
+RETURNS boolean LANGUAGE sql IMMUTABLE PARALLEL SAFE AS $search$
+ SELECT query = '' OR strpos(lower(document), lower(query)) > 0 OR NOT EXISTS (
+  SELECT 1 FROM regexp_split_to_table(lower(trim(query)), '\s+') AS words(term)
+  WHERE strpos(lower(document), term) = 0
+   AND (term !~ '^[[:alnum:]]{4,}$' OR public.word_similarity(term, lower(document)) < 0.5)
+ );
+$search$;
+
+ALTER TABLE question ADD COLUMN IF NOT EXISTS topic_source VARCHAR(10) NOT NULL DEFAULT 'manual';
+
+ALTER TABLE interview ALTER COLUMN interview_date DROP NOT NULL;

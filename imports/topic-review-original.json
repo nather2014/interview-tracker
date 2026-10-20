@@ -1,0 +1,236 @@
+[
+  {
+    "id": 6,
+    "company": "Capgemini",
+    "role": "Java / Spring Boot Developer",
+    "field": "Technology",
+    "experience": "3–5",
+    "interviewType": "Walk-in",
+    "interviewDate": "2026-09-20",
+    "location": "",
+    "questions": [
+      {
+        "id": 6,
+        "question": "What is the @CrossOrigin annotation in Spring Boot?",
+        "topic": "Spring Boot"
+      },
+      {
+        "id": 7,
+        "question": "What is flatMap() in Java Streams? How does it work with nested lists like List<List<List<String>>>? What will be the output?",
+        "topic": "Java Streams"
+      },
+      {
+        "id": 8,
+        "question": "How many parameters does the Predicate functional interface accept? What is its abstract method name? Write a Predicate and pass the value 10.",
+        "topic": "Java Functional Interfaces"
+      },
+      {
+        "id": 9,
+        "question": "How do you create your own functional interface and pass parameters to its abstract method?",
+        "topic": "Java Functional Interfaces"
+      },
+      {
+        "id": 10,
+        "question": "Explain the Producer–Consumer concept in Java without Kafka. How would you implement it using a List? How do you handle simultaneous add operations?",
+        "topic": "Java Concurrency"
+      },
+      {
+        "id": 11,
+        "question": "If multiple threads simultaneously perform update and delete operations on ConcurrentHashMap, how does it handle them internally? Does it create a copy?",
+        "topic": "Java Concurrency"
+      },
+      {
+        "id": 12,
+        "question": "In Java Streams, which functional interfaces are used by map() and filter()?",
+        "topic": "Java Streams"
+      },
+      {
+        "id": 13,
+        "question": "What is the difference between Comparable and Comparator? Are both functional interfaces? What is the method name and how many parameters does each method accept? How can we sort a List using Comparable and Comparator?",
+        "topic": "Java Collections"
+      },
+      {
+        "id": 14,
+        "question": "How does parallelStream() work internally? How are tasks divided among multiple threads?",
+        "topic": "Java Concurrency"
+      },
+      {
+        "id": 15,
+        "question": "Can we use both @RestController and @Controller on the same class?\n\n@RestController\n@Controller\npublic class P1 {\n}\n\nWill it work? How does Spring handle it?",
+        "topic": "Spring Boot"
+      },
+      {
+        "id": 16,
+        "question": "How does SQL LEFT JOIN work internally? How does the database know which is the left table and which is the right table?",
+        "topic": "SQL"
+      },
+      {
+        "id": 17,
+        "question": "Create a CompletableFuture and explain how it works asynchronously. Which thread executes the asynchronous task, and how do we handle the result?",
+        "topic": "Java Concurrency"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "company": "Deloitte",
+    "role": "Java Dev",
+    "field": "Technology",
+    "experience": "3–5",
+    "interviewType": "Online",
+    "interviewDate": "2026-08-27",
+    "location": "",
+    "questions": [
+      {
+        "id": 60,
+        "question": "What is Spring security and what have you used in your project?",
+        "topic": "Spring Security"
+      },
+      {
+        "id": 61,
+        "question": "What is Spring security and what have you used in your project?",
+        "topic": "Java"
+      },
+      {
+        "id": 62,
+        "question": "What is different between Oauth2 vs JWT? which we can use in recent days?",
+        "topic": "Spring Authentication"
+      },
+      {
+        "id": 63,
+        "question": "What is Arraylist vs hashmap and which one is optimised and theadsafe?",
+        "topic": "Java"
+      },
+      {
+        "id": 64,
+        "question": "What is internal working of hashmap? Is hashmap threadsafe?",
+        "topic": "Java"
+      },
+      {
+        "id": 65,
+        "question": "What to handle collision in hashmap?",
+        "topic": "Java"
+      },
+      {
+        "id": 66,
+        "question": "What are java 8 features you know? which ones you have implemented in your project?",
+        "topic": "Java"
+      },
+      {
+        "id": 67,
+        "question": "what are streams and how it resolves problem than traditional approach?",
+        "topic": "Java8"
+      },
+      {
+        "id": 68,
+        "question": "What are default methods in Java8?",
+        "topic": "Java8"
+      },
+      {
+        "id": 69,
+        "question": "What is functional interface in Java8?",
+        "topic": "Java8"
+      },
+      {
+        "id": 70,
+        "question": "Difference between comparable vs comparator? Which one to use in which condition?",
+        "topic": "Java"
+      },
+      {
+        "id": 71,
+        "question": "What are methods in Comparable and Comparator?",
+        "topic": "Java"
+      },
+      {
+        "id": 72,
+        "question": "What is synchronisation in java?",
+        "topic": "Java"
+      },
+      {
+        "id": 73,
+        "question": "How to make a connection threadsafe?",
+        "topic": "Java"
+      },
+      {
+        "id": 74,
+        "question": "What does wait(), notify(), and notifyAll() methods do in thread?",
+        "topic": "Java"
+      },
+      {
+        "id": 75,
+        "question": "What is Marker Interface? What are types of Marker Interfaces?",
+        "topic": "Java"
+      },
+      {
+        "id": 76,
+        "question": "What happens when two distinct keys in a Java HashMap produce the exact same hashCode() value, resulting in a hashCollision()?",
+        "topic": "Java"
+      },
+      {
+        "id": 77,
+        "question": "Can we have two different values for exact same key in HashMap?",
+        "topic": "Java"
+      },
+      {
+        "id": 78,
+        "question": "What is segregation in Java?",
+        "topic": "Java"
+      },
+      {
+        "id": 79,
+        "question": "How to achieve multithreading in Java? What is modern production approach?",
+        "topic": "Java"
+      },
+      {
+        "id": 80,
+        "question": "In Springboot how to manage Multi-threading?",
+        "topic": "Java"
+      },
+      {
+        "id": 81,
+        "question": "what is @enableAsync annotation does? Where do we use @async annotation?",
+        "topic": "Java"
+      },
+      {
+        "id": 82,
+        "question": "What is circuit breaker design pattern in java?",
+        "topic": "Java"
+      },
+      {
+        "id": 83,
+        "question": "What is service discovery in microservices?",
+        "topic": "Java"
+      },
+      {
+        "id": 84,
+        "question": "Explain Springboot Bean lifecyle in detail?",
+        "topic": "Java"
+      },
+      {
+        "id": 85,
+        "question": "Explain whole Public static void main(String[] args) and why do use static keyword in it?",
+        "topic": "Java"
+      },
+      {
+        "id": 86,
+        "question": "How many level we can use static keyword?",
+        "topic": "Java"
+      },
+      {
+        "id": 87,
+        "question": "Have you worked on Kafka?",
+        "topic": "Java"
+      },
+      {
+        "id": 88,
+        "question": "Let's consider from service A we need to send message to service B. But service B is already having multiple instances and we have to send same messages to service B for all instances? How can we achieve using Kafka?",
+        "topic": "Java"
+      },
+      {
+        "id": 89,
+        "question": "For employee id, name and salary write down a query fetch employee employees second highest salary also find out distinct employee and give the count of it.",
+        "topic": "Java"
+      }
+    ]
+  }
+]

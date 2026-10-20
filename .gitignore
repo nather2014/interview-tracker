@@ -3,3 +3,8 @@ backend/interview-tracker
 backups/
 __pycache__/
 *.log
+
+.tools/
+topic-ai/model/
+
+deploy/*.tar.gz

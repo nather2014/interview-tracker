@@ -1,0 +1,149 @@
+[
+  {
+    "id": 90,
+    "question": "Why were Streams and Lambda Expressions introduced in Java 8?",
+    "topic": "Java",
+    "interviewId": 14,
+    "newTopic": "Java Streams"
+  },
+  {
+    "id": 91,
+    "question": "Why are intermediate operations in Streams lazy?",
+    "topic": "Java",
+    "interviewId": 14,
+    "newTopic": "Java Streams"
+  },
+  {
+    "id": 92,
+    "question": "Why do we use CopyOnWriteArrayList?\nCollections & Java",
+    "topic": "Java",
+    "interviewId": 14,
+    "newTopic": "Java Collections"
+  },
+  {
+    "id": 93,
+    "question": "How does HashSet work internally?",
+    "topic": "Java",
+    "interviewId": 14,
+    "newTopic": "Java Collections"
+  },
+  {
+    "id": 94,
+    "question": "What are the different ways to create an object in Java?\nMultithreading",
+    "topic": "Java",
+    "interviewId": 14,
+    "newTopic": "Core Java"
+  },
+  {
+    "id": 95,
+    "question": "How do threads communicate with each other in Java?",
+    "topic": "Java",
+    "interviewId": 14,
+    "newTopic": "Java Concurrency"
+  },
+  {
+    "id": 96,
+    "question": "What is the difference between yield() and join()?\nKafka & RabbitMQ",
+    "topic": "Java",
+    "interviewId": 14,
+    "newTopic": "Java Concurrency"
+  },
+  {
+    "id": 97,
+    "question": "What is the difference between Kafka and RabbitMQ?",
+    "topic": "Java",
+    "interviewId": 14,
+    "newTopic": "Messaging"
+  },
+  {
+    "id": 98,
+    "question": "What is the difference between pull and push mechanisms in messaging?",
+    "topic": "Java",
+    "interviewId": 14,
+    "newTopic": "Messaging"
+  },
+  {
+    "id": 99,
+    "question": "How does message retention work, and how long are messages retained?\nAI Tools",
+    "topic": "Java",
+    "interviewId": 14,
+    "newTopic": "Messaging"
+  },
+  {
+    "id": 100,
+    "question": "Which AI tools have you used?",
+    "topic": "Java",
+    "interviewId": 14,
+    "newTopic": "AI Tools"
+  },
+  {
+    "id": 101,
+    "question": "What issues or challenges have you faced while using AI coding tools?\nMicroservices & Design Patterns",
+    "topic": "Java",
+    "interviewId": 14,
+    "newTopic": "AI Tools"
+  },
+  {
+    "id": 102,
+    "question": "What is the Circuit Breaker pattern, and why do we use it?",
+    "topic": "Java",
+    "interviewId": 14,
+    "newTopic": "Microservices"
+  },
+  {
+    "id": 103,
+    "question": "What is the Saga Design Pattern?",
+    "topic": "Java",
+    "interviewId": 14,
+    "newTopic": "Microservices"
+  },
+  {
+    "id": 104,
+    "question": "Have you used any of these new applications?\nSystem Design & Production",
+    "topic": "Java",
+    "interviewId": 14,
+    "newTopic": "Other"
+  },
+  {
+    "id": 105,
+    "question": "How would you design a new application using microservices?",
+    "topic": "Java",
+    "interviewId": 14,
+    "newTopic": "Microservices"
+  },
+  {
+    "id": 106,
+    "question": "What design principles do you follow when designing microservices?",
+    "topic": "Java",
+    "interviewId": 14,
+    "newTopic": "Microservices"
+  },
+  {
+    "id": 107,
+    "question": "Have you created the CI/CD pipeline for the development team or for both teams?",
+    "topic": "Java",
+    "interviewId": 14,
+    "newTopic": "DevOps"
+  },
+  {
+    "id": 108,
+    "question": "How do you monitor your applications?",
+    "topic": "Java",
+    "interviewId": 14,
+    "newTopic": "Observability"
+  },
+  {
+    "id": 109,
+    "question": "If a production issue occurs, how do you troubleshoot it?\nOther Questions",
+    "topic": "Java",
+    "interviewId": 14,
+    "newTopic": "Production Troubleshooting"
+  },
+  {
+    "id": 110,
+    "question": "What is the CAP theorem?",
+    "topic": "Java",
+    "interviewId": 14,
+    "newTopic": "Distributed Systems"
+  }
+]
