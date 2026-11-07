@@ -1,0 +1,43 @@
+{
+  "company": "Mphasis",
+  "role": "Java Backend Developer",
+  "field": "Technology",
+  "experience": "3–5",
+  "interviewType": "Online",
+  "interviewDate": "",
+  "location": "Bangalore",
+  "questions": [
+    {
+      "question": "Given an Employee entity with id, salary, department and address, write a Java 8 Stream API pipeline to find the third-highest distinct salary in each department. Focus on grouping collectors, distinct salaries sorted in descending order, and downstream transformations using Collectors.collectingAndThen().",
+      "topic": "Java Streams"
+    },
+    {
+      "question": "Expand a compressed alphanumeric string such as \"a3b3c5\" into \"aaabbbccccc\" without regex (Pattern / Matcher). Support multi-digit counts using character traversal and dynamic integer parsing, and use StringBuilder efficiently.",
+      "topic": "DSA"
+    },
+    {
+      "question": "What core architectural strategies, headers and mechanisms secure enterprise Java/Spring Boot applications end-to-end?",
+      "topic": "Spring Security"
+    },
+    {
+      "question": "Which core libraries and dependencies provide OAuth 2.0 / OIDC support in modern Spring Boot applications? Discuss spring-boot-starter-oauth2-resource-server and spring-boot-starter-oauth2-client.",
+      "topic": "Spring Security"
+    },
+    {
+      "question": "How do you intercept, validate and propagate JWT tokens between the Spring Security filter chain, the controller layer (SecurityContextHolder / @AuthenticationPrincipal) and the downstream service layer?",
+      "topic": "Spring Security"
+    },
+    {
+      "question": "How do you structure exception handling and log levels across an enterprise Java microservice?",
+      "topic": "Observability"
+    },
+    {
+      "question": "What is the architectural difference between a logging abstraction such as SLF4J and concrete logging implementations?",
+      "topic": "Observability"
+    },
+    {
+      "question": "What are the standard logging libraries (Logback, Log4j2 and java.util.logging), and how do they integrate with SLF4J?",
+      "topic": "Observability"
+    }
+  ]
+}

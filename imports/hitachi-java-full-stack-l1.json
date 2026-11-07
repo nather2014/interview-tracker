@@ -1,0 +1,51 @@
+{
+  "company": "Hitachi Digital Services",
+  "role": "Java Full Stack Developer — L1 Screening",
+  "field": "Technology",
+  "experience": "",
+  "interviewType": "L1 Screening",
+  "interviewDate": "",
+  "location": "",
+  "questions": [
+    {
+      "question": "Tell me about yourself and explain your recent project architecture, tech stack, and your role in detail.",
+      "topic": "Project Experience"
+    },
+    {
+      "question": "What version of Java have you worked on, and which features have you used in real projects?",
+      "topic": "Core Java"
+    },
+    {
+      "question": "Write a Java 8 Streams program to find the second-highest unique number in an integer array. Explain the stream pipeline, sorting, distinct elements, and terminal operations.",
+      "topic": "Java Streams"
+    },
+    {
+      "question": "Explain the internal working of HashMap in Java, including hashing, collision handling, and its bucket structure using linked lists or trees.",
+      "topic": "Java Collections"
+    },
+    {
+      "question": "What is multiple inheritance in Java, and how can it be achieved using interfaces?",
+      "topic": "Java OOP"
+    },
+    {
+      "question": "What is the Singleton design pattern? Write a Java example and explain how it ensures a single instance in an application.",
+      "topic": "Design Patterns"
+    },
+    {
+      "question": "How do you implement role-based access control (RBAC) in Spring Boot? How does Spring Security validate roles and restrict API access?",
+      "topic": "Spring Security"
+    },
+    {
+      "question": "What is the Spring IoC Container, and how does dependency injection work internally?",
+      "topic": "Spring Boot"
+    },
+    {
+      "question": "What is lazy loading in Angular, and how does it improve application performance?",
+      "topic": "Angular"
+    },
+    {
+      "question": "How do you optimize Angular applications for faster page loads? Discuss lazy-loaded modules, change detection, TrackBy, and code splitting.",
+      "topic": "Angular"
+    }
+  ]
+}

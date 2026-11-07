@@ -1,0 +1,67 @@
+{
+  "company": "Hexaware Technologies",
+  "role": "AI TalentQuest Java Full Stack Developer — Screening",
+  "field": "Technology",
+  "experience": "3–5",
+  "interviewType": "AI Screening",
+  "interviewDate": "",
+  "location": "",
+  "questions": [
+    {
+      "question": "Explain your project architecture and technology stack, including Angular, Spring Boot, microservices and MySQL.",
+      "topic": "Project Experience"
+    },
+    {
+      "question": "How do you implement JWT authentication to secure REST APIs in Spring Boot?",
+      "topic": "Spring Security"
+    },
+    {
+      "question": "Explain the complete JWT flow, including token generation, validation, filters and Spring Security integration.",
+      "topic": "Spring Security"
+    },
+    {
+      "question": "How do you implement role-based access control using JWT with ADMIN and USER roles?",
+      "topic": "Spring Security"
+    },
+    {
+      "question": "How would you design a secure authentication system using Spring Security and JWT?",
+      "topic": "Spring Security"
+    },
+    {
+      "question": "What is logging in Java, and why is it critical in production systems?",
+      "topic": "Logging"
+    },
+    {
+      "question": "How do Log4j2 and SLF4J differ?",
+      "topic": "Logging"
+    },
+    {
+      "question": "Write a program configured with log4j2.xml to send error logs to a file and debug logs to the console.",
+      "topic": "Logging"
+    },
+    {
+      "question": "How do microservices communicate using Feign Client?",
+      "topic": "Microservices"
+    },
+    {
+      "question": "How do you configure and enable Feign Client in Spring Boot?",
+      "topic": "Microservices"
+    },
+    {
+      "question": "How do Feign Client and RestTemplate differ?",
+      "topic": "Microservices"
+    },
+    {
+      "question": "How do you implement lazy loading in Angular modules?",
+      "topic": "Angular"
+    },
+    {
+      "question": "How do you manage shared services in Angular and avoid duplication?",
+      "topic": "Angular"
+    },
+    {
+      "question": "Write an Angular component that displays a product list, filters it by search text, and uses Reactive Forms.",
+      "topic": "Angular"
+    }
+  ]
+}

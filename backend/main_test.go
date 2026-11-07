@@ -373,6 +373,53 @@ func TestPostgresParity(t *testing.T) {
 	if err := isolated.QueryRow("SELECT count(*) FROM visitor_presence").Scan(&visitors); err != nil || visitors != 2 {
 		t.Fatalf("expired visitors not removed: %d, %v", visitors, err)
 	}
+	// Daily totals survive hash cleanup, schema reapplication and repeat heartbeats.
+	if _, err := isolated.Exec("INSERT INTO visitor_presence VALUES ((CURRENT_TIMESTAMP AT TIME ZONE 'UTC')::date - 1, 'migration', CURRENT_TIMESTAMP - INTERVAL '1 day')"); err != nil {
+		t.Fatal(err)
+	}
+	if _, err := isolated.Exec(`INSERT INTO visitor_daily VALUES
+ ((CURRENT_TIMESTAMP AT TIME ZONE 'UTC')::date - 32, 7),
+ ((CURRENT_TIMESTAMP AT TIME ZONE 'UTC')::date - 2, 3)`); err != nil {
+		t.Fatal(err)
+	}
+	if _, err := isolated.Exec(schema); err != nil {
+		t.Fatal(err)
+	}
+	if _, err := isolated.Exec(schema); err != nil {
+		t.Fatal(err)
+	}
+	w = httptest.NewRecorder()
+	h.ServeHTTP(w, r)
+	readStats(2, 2)
+	var history struct {
+		History []struct {
+			Day      string
+			Visitors int64
+		}
+		HistoryPage    int
+		HasMoreHistory bool
+	}
+	w = request("GET", "/api/admin/visitors", "", "test-secret", 200)
+	if err := json.Unmarshal(w.Body.Bytes(), &history); err != nil {
+		t.Fatal(err)
+	}
+	if len(history.History) != 30 || !history.HasMoreHistory || history.History[0].Visitors != 2 || history.History[1].Visitors != 1 || history.History[2].Visitors != 3 {
+		t.Fatalf("daily history or migration: %s", w.Body.String())
+	}
+	w = request("GET", "/api/admin/visitors?historyPage=1", "", "test-secret", 200)
+	if err := json.Unmarshal(w.Body.Bytes(), &history); err != nil {
+		t.Fatal(err)
+	}
+	if len(history.History) != 3 || history.HasMoreHistory || history.HistoryPage != 1 || history.History[0].Visitors != 0 || history.History[2].Visitors != 7 {
+		t.Fatalf("older daily history: %s", w.Body.String())
+	}
+	w = request("GET", "/api/admin/visitors?historyPage=2", "", "test-secret", 200)
+	if !strings.Contains(w.Body.String(), `"history":[]`) {
+		t.Fatalf("empty history: %s", w.Body.String())
+	}
+	for _, page := range []string{"-1", "invalid", "12001"} {
+		request("GET", "/api/admin/visitors?historyPage="+page, "", "test-secret", 400)
+	}
 	r.Header.Set("Sec-Fetch-Site", "cross-site")
 	w = httptest.NewRecorder()
 	h.ServeHTTP(w, r)

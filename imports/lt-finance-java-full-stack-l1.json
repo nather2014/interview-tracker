@@ -1,0 +1,51 @@
+{
+  "company": "L&T Finance",
+  "role": "Java Full Stack Developer — L1 (Internal Project Round)",
+  "field": "Technology",
+  "experience": "3–5",
+  "interviewType": "",
+  "interviewDate": "",
+  "location": "",
+  "questions": [
+    {
+      "question": "Introduce yourself and explain your project architecture, responsibilities, and the Java Full Stack technologies you have worked with.",
+      "topic": "Project Experience"
+    },
+    {
+      "question": "As of 2026, what is the latest stable version of Spring Boot? What are its key improvements, and which Java versions does it support?",
+      "topic": "Spring Boot"
+    },
+    {
+      "question": "Explain the Strategy design pattern in Java. Where have you implemented it in a real project?",
+      "topic": "Design Patterns"
+    },
+    {
+      "question": "What are behavioral design patterns? Name a few and explain a practical use case.",
+      "topic": "Design Patterns"
+    },
+    {
+      "question": "What is a marker interface in Java? Why is it used, and how would you create a custom marker interface?",
+      "topic": "Core Java"
+    },
+    {
+      "question": "What is a DTO (Data Transfer Object), and why is it important in enterprise applications?",
+      "topic": "Java OOP"
+    },
+    {
+      "question": "Explain the difference between a DTO and a POJO with practical examples.",
+      "topic": "Java OOP"
+    },
+    {
+      "question": "What is an anonymous class in Java? When would you use it instead of a named class?",
+      "topic": "Java OOP"
+    },
+    {
+      "question": "What is an immutable class? Why is immutability important in Java applications?",
+      "topic": "Core Java"
+    },
+    {
+      "question": "Explain how to create an immutable class in Java using a simple Notepad example, and discuss best practices.",
+      "topic": "Core Java"
+    }
+  ]
+}

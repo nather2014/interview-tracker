@@ -1,0 +1,59 @@
+{
+  "company": "Accolite X Bounteous",
+  "role": "Java Full Stack Developer — L1",
+  "field": "Technology",
+  "experience": "",
+  "interviewType": "Online",
+  "interviewDate": "",
+  "location": "India",
+  "questions": [
+    {
+      "question": "What is your total experience? Explain your recent project and your contributions.",
+      "topic": "Project Experience"
+    },
+    {
+      "question": "What are data structures, and how would you rate your proficiency out of 10?",
+      "topic": "Data Structures"
+    },
+    {
+      "question": "What are the primary types of data structures? Explain linear versus non-linear structures and when to use each.",
+      "topic": "Data Structures"
+    },
+    {
+      "question": "Given a string s, find the length of the longest substring without repeating characters. Example 1: s = \"aaa\", output: 1 (\"a\"). Example 2: s = \"abcdefabcbb\", output: 6 (\"abcdef\").",
+      "topic": "DSA"
+    },
+    {
+      "question": "Rearrange an unsorted integer array in place so that all negative numbers appear before all positive numbers, using O(1) extra space. Relative order does not matter. Input: [1, 2, 3, -1, -2, 4, 5, -10]. Example output: [-10, -2, -1, 3, 2, 4, 5, 1].",
+      "topic": "DSA"
+    },
+    {
+      "question": "What is functional programming in the context of Java?",
+      "topic": "Java 8 Features"
+    },
+    {
+      "question": "What is the fundamental difference between a functional interface and a lambda expression? How do they work together, and what are their effects on performance and boilerplate code?",
+      "topic": "Java Functional Interfaces"
+    },
+    {
+      "question": "Explain the differences between @AutoConfiguration and @EnableAutoConfiguration.",
+      "topic": "Spring Boot"
+    },
+    {
+      "question": "What happens under the hood when you use @SpringBootApplication?",
+      "topic": "Spring Boot"
+    },
+    {
+      "question": "What is @Bean, and what internal mechanisms does Spring use to register and inject these beans?",
+      "topic": "Spring Core"
+    },
+    {
+      "question": "Which annotations configure a repository, and how does Spring auto-configuration discover and register repositories in the bean context?",
+      "topic": "Spring Data"
+    },
+    {
+      "question": "What is the difference between Git and GitHub?",
+      "topic": "DevOps"
+    }
+  ]
+}

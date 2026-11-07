@@ -43,6 +43,79 @@ Source: https://www.linkedin.com/posts/yash-shah-java-fullstack-developer_ey-jav
 
 The source says wait() versus run(); this potentially unusual wording is retained for review.
 
+## Hitachi Digital Services — Java Full Stack Developer, L1 Screening
+
+Source: User-provided LinkedIn post text from Yash Shah. The post was marked “7mo • Edited”; no direct post URL or interview date was provided.
+
+1. Describe yourself and your recent project architecture, tech stack and role.
+2. Which Java version and features have you used in real projects?
+3. Find the second-highest unique integer in an array using Java 8 Streams; explain the pipeline, sorting, distinct elements and terminal operation.
+4. Explain HashMap hashing, collision handling and its linked-list/tree bucket structure.
+5. What is multiple inheritance in Java, and how do interfaces support it?
+6. Explain the Singleton pattern and show how a Java implementation ensures a single instance.
+7. How do you implement RBAC in Spring Boot? How does Spring Security validate roles and restrict API access?
+8. What is the Spring IoC Container, and how does dependency injection work internally?
+9. What is Angular lazy loading, and how does it improve performance?
+10. How do you optimize Angular page load performance using lazy loading, change detection, TrackBy and code splitting?
+
+## Wipro — Java Full Stack Developer, 3–5 years
+
+Source: User-provided LinkedIn post text from Yash Shah. The post was marked “7mo”; no direct post URL or interview date was provided. Duration: 45–60 minutes.
+
+1. Describe yourself and your roles and responsibilities in your project.
+2. How many years of experience do you have with Java, Angular, MySQL, Kafka and AWS?
+3. Explain the SOLID principles with real-world examples.
+4. Compare map() and flatMap() in Java Streams, including efficiency and use cases.
+5. Explain ConcurrentHashMap internals and its multithreaded performance benefits.
+6. Explain Java memory management and memory types.
+7. Compare heap and stack memory and their performance impact.
+8. What is the transient keyword, and why is it used?
+9. Explain synchronization in Java with an example.
+10. What is ClassNotFoundException, and when does it occur?
+11. Explain how @EnableAutoConfiguration works internally in Spring Boot.
+12. What is autowiring, and what are alternative dependency injection methods?
+13. What steps connect a Spring Boot application to a database?
+14. Write a REST API to handle an ID payload and implement CRUD mapping.
+15. Explain the Saga pattern in microservices with an example.
+16. What is CQRS (Command Query Responsibility Segregation)?
+17. Compare the SQL WHERE and HAVING clauses.
+18. What is a self-join in SQL?
+19. Explain inner and outer queries in a subquery.
+20. Compare LEFT JOIN and RIGHT JOIN.
+21. How do @Component and @Primary differ in Spring Boot?
+22. How do you implement an Angular AuthGuard to secure routes?
+
+## Paramatrix Technologies Pvt Ltd — Java Full Stack Developer, L1, 3–5 years
+
+Source: User-provided LinkedIn post text from Yash Shah. The post was marked “8mo • Edited”; no direct post URL or interview date was provided. Duration: 20–30 minutes.
+
+1. Discuss recent project architecture, technology stack, responsibilities, production deployment experience, and handling performance issues or production bugs.
+2. Find the second-highest number in [2,3,4,5,6,1,2,3,6,7,8,9,8], using both traditional Java without Java 8 and Java 8 Streams.
+3. Given a parent method with protected visibility and an overriding child method with default visibility, determine whether it compiles. Explain visibility and return-type rules for overriding.
+4. Discuss Java versions used, Java 8 features, improvements in Java 17/21, and experience migrating projects.
+5. Identify Spring Boot versions compatible with Java 17 and 21, and explain upgrade steps covering build configuration, dependencies, compiler settings and deprecated APIs.
+6. Discuss Angular versions used, whether Angular depends on the Java backend version, and how to ensure frontend/backend compatibility.
+7. Find the eighth-highest salary using a subquery and DENSE_RANK() or ROW_NUMBER(), accounting for duplicate salaries.
+
+## Hexaware Technologies — AI TalentQuest Java Full Stack Developer, 3–5 years
+
+Source: User-provided LinkedIn post text from Yash Shah. The post was marked “8mo”; no direct post URL or interview date was provided. Duration: one hour. Screening focused on JWT security, microservices, Angular and logging.
+
+1. Explain project architecture and stack, including Angular, Spring Boot, microservices and MySQL.
+2. How do you implement JWT authentication to secure Spring Boot REST APIs?
+3. Explain JWT generation, validation, filters and Spring Security integration.
+4. How do you implement JWT-based RBAC for ADMIN and USER roles?
+5. Design a secure authentication system using Spring Security and JWT.
+6. What is Java logging, and why does it matter in production?
+7. Compare Log4j2 and SLF4J.
+8. Configure log4j2.xml to write error logs to a file and debug logs to the console.
+9. How do microservices communicate using Feign Client?
+10. How do you configure and enable Feign Client in Spring Boot?
+11. Compare Feign Client and RestTemplate.
+12. How do you implement lazy loading in Angular modules?
+13. How do you manage shared Angular services and avoid duplication?
+14. Build an Angular component that displays a product list, filters by search, and uses Reactive Forms.
+
 ## Deloitte — Java Full Stack Developer, L1, 1–3 years
 
 Source: https://www.linkedin.com/posts/yash-shah-java-fullstack-developer_deloitte-java-javadeveloper-activity-7290696692440469504-KA5S

@@ -55,22 +55,31 @@ async function browse() {
 $('#previous').onclick = () => { if (page > 0) { page--; browse(); } };
 $('#next').onclick = () => { page++; browse(); };
 if (admin) {
-  let visitorTimer, visitorRequest = 0;
+  let visitorTimer, visitorRequest = 0, visitorHistoryPage = 0;
   async function visitors() {
     const current = ++visitorRequest;
     try {
-      const data = await api('/admin/visitors', {headers:{Authorization:'Bearer ' + token}});
+      const data = await api('/admin/visitors?historyPage=' + visitorHistoryPage, {headers:{Authorization:'Bearer ' + token}});
       if (!token || current !== visitorRequest) return;
       $('#visitors-online').textContent = data.online;
       $('#visitors-today').textContent = data.today;
+      $('#visitor-history-body').innerHTML = data.history.map(day => `<tr><td>${escape(day.day)}</td><td>${escape(String(day.visitors))}</td></tr>`).join('');
+      $('#visitor-history-empty').textContent = data.history.length ? '' : 'No visitor history yet.';
+      $('#visitor-history-newer').disabled = visitorHistoryPage === 0;
+      $('#visitor-history-older').disabled = !data.hasMoreHistory;
+      $('#visitor-history-page').textContent = `Page ${visitorHistoryPage + 1}`;
       $('#visitor-status').textContent = 'Updates every 15 seconds.';
     } catch (error) {
       if (token && current === visitorRequest) {
         $('#visitors-online').textContent = '—'; $('#visitors-today').textContent = '—';
         $('#visitor-status').textContent = 'Visitor counts unavailable. Retrying…';
+        $('#visitor-history-body').replaceChildren();
+        $('#visitor-history-empty').textContent = 'History unavailable. Retrying…';
       }
     }
   }
+  $('#visitor-history-newer').onclick = () => { if (visitorHistoryPage > 0) { visitorHistoryPage--; visitors(); } };
+  $('#visitor-history-older').onclick = () => { visitorHistoryPage++; visitors(); };
   $('#login').onsubmit = async event => {
     event.preventDefault();
     token = $('#admin-token').value;
@@ -78,11 +87,11 @@ if (admin) {
       await api('/admin/session', {headers:{Authorization:'Bearer ' + token}});
       $('#login').hidden = true; $('#admin-content').hidden = false;
       $('#admin-token').value = ''; $('#login-error').textContent = ''; browse();
-      clearInterval(visitorTimer); visitors();
+      clearInterval(visitorTimer); visitorHistoryPage = 0; visitors();
       visitorTimer = setInterval(() => { if (!document.hidden) visitors(); }, 15000);
     } catch (error) { token = ''; $('#login-error').textContent = error.message; }
   };
-  $('#logout').onclick = () => { clearInterval(visitorTimer); visitorRequest++; token = ''; $('#login').hidden = false; $('#admin-content').hidden = true; $('#reports').replaceChildren(); $('#submission').close(); editingId = null; };
+  $('#logout').onclick = () => { clearInterval(visitorTimer); visitorRequest++; token = ''; $('#login').hidden = false; $('#admin-content').hidden = true; $('#reports').replaceChildren(); $('#visitor-history-body').replaceChildren(); $('#submission').close(); editingId = null; };
   $('#reports').onclick = async event => {
     const edit = event.target.closest('[data-edit]');
     if (edit) { editReport(loadedReports.get(edit.dataset.edit)); return; }
@@ -161,7 +170,7 @@ if ($('#submission-form')) {
   $('#suggest-topics').onclick = () => { $('#auto-topics').checked = true; clearTimeout(topicTimer); suggestMissingTopics(); };
   $('#add-question').onclick = () => addQuestion(); addQuestion();
   function parseQuestions(raw) {
-    const lines = raw.replace(/\r\n?/g, '\n').split('\n').map(line => line.replace(/^\s*\[[^\]\n]+\]\s*[^:\n]+:\s*/, '').trim()).filter(Boolean);
+    const lines = raw.replace(/\r\n?/g, '\n').split('\n').map(line => line.trim()).filter(Boolean);
     const numbered = /^\d{1,3}\s*[.)、:\-]\s*/;
     const first = lines.findIndex(line => numbered.test(line));
     if (first < 0) return lines.map(line => line.replace(/^[-*•]\s+/, '')).filter(Boolean);

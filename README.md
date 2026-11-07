@@ -26,7 +26,7 @@ Open http://localhost:8091. Default credentials in Compose are only for local de
 
 ## Features and limits
 
-The Add interview form supports pasting a whole numbered list (including WhatsApp message headers), or one question per line. Set a shared topic, add the batch, then review and edit each question/topic before saving. Existing filled questions are preserved; batches exceeding the 50-question or 2,000-character-per-question limits are rejected without changing the form.
+The Add interview form supports pasting a whole numbered list or one question per line. Set a shared topic, add the batch, then review and edit each question/topic before saving. Existing filled questions are preserved; batches exceeding the 50-question or 2,000-character-per-question limits are rejected without changing the form.
 
 Only company name is required. Reports may include up to 50 questions, topics, field, role, experience band, format, date and location. Omitted dates remain unspecified. Search is case-insensitive across questions/topics/company/role/field, supports word-order-independent terms and tolerates typos in words of four or more characters using PostgreSQL pg_trgm. Search shows matching questions and combines with topic filters. pg_trgm must be available on the PostgreSQL server; startup installs the trusted extension when needed. field/role/company/topic/experience/year filters combine. Literal percent and underscore searches are escaped. Twelve reports appear per page, newest interview date first. Invalid and future-dated submissions are rejected.
 
@@ -69,7 +69,7 @@ Browser verification: `scripts/test-general-browser.cjs` uses Playwright at widt
 
 ## Visitor counts
 
-Sign in at `/admin.html` to see Online now (visible public pages reporting within the last 5 minutes) and Visitors today (unique browsers since midnight UTC). Counts refresh every 15 seconds. Public pages send a heartbeat every minute while visible. A random HttpOnly same-site cookie expires at midnight UTC; PostgreSQL stores only its daily hash and last-seen time. Older days are removed on the next heartbeat. No IP addresses or fingerprints are stored by this feature. Different browsers, blocked cookies, and automated traffic can affect these approximate counts. Collection starts when this release is deployed.
+Sign in at `/admin.html` to see Online now (visible public pages reporting within the last 5 minutes) and Visitors today (unique browsers since midnight UTC). Counts refresh every 15 seconds. Public pages send a heartbeat every minute while visible. A random HttpOnly same-site cookie expires at midnight UTC; PostgreSQL stores only its daily hash and last-seen time. Individual visitor hashes from older days are removed on the next heartbeat; anonymous daily totals are retained. Moderation shows daily unique-browser history in pages of 30 days, newest first, including zero-visitor days after tracking began. Totals refresh every 15 seconds. History starts with the earliest retained visitor records when this feature is installed; previously deleted days cannot be recovered. These are unique-browser counts, not page-load counts. No IP addresses or fingerprints are stored by this feature. Different browsers, blocked cookies, and automated traffic can affect these approximate counts. Collection starts when this release is deployed.
 
 ## Automatic topics
 

@@ -1,0 +1,99 @@
+{
+  "company": "Wipro",
+  "role": "Java Full Stack Developer",
+  "field": "Technology",
+  "experience": "3–5",
+  "interviewType": "",
+  "interviewDate": "",
+  "location": "",
+  "questions": [
+    {
+      "question": "Tell me about yourself and explain your roles and responsibilities in your project.",
+      "topic": "Project Experience"
+    },
+    {
+      "question": "How many years of experience do you have with Java, Angular, MySQL, Kafka, and AWS?",
+      "topic": "Project Experience"
+    },
+    {
+      "question": "What are the SOLID principles in Java? Explain each with real-world examples.",
+      "topic": "SOLID Principles"
+    },
+    {
+      "question": "How do map() and flatMap() differ in Java Streams? Which is more efficient, and when would you use each?",
+      "topic": "Java Streams"
+    },
+    {
+      "question": "What is ConcurrentHashMap? Explain its internal working and how it improves performance in multithreaded programs.",
+      "topic": "Java Collections"
+    },
+    {
+      "question": "What is memory management in Java? Explain the types of memory.",
+      "topic": "Java Memory Management"
+    },
+    {
+      "question": "How do heap memory and stack memory differ, and how do they affect performance?",
+      "topic": "Java Memory Management"
+    },
+    {
+      "question": "What is the transient keyword in Java, and why is it used?",
+      "topic": "Core Java"
+    },
+    {
+      "question": "What is synchronization in Java? Explain with an example.",
+      "topic": "Java Concurrency"
+    },
+    {
+      "question": "What is ClassNotFoundException, and when does it occur?",
+      "topic": "Core Java"
+    },
+    {
+      "question": "What is @EnableAutoConfiguration in Spring Boot, and how does it work internally?",
+      "topic": "Spring Boot"
+    },
+    {
+      "question": "What is autowiring in Spring Boot? What are alternative ways to inject dependencies?",
+      "topic": "Spring Boot"
+    },
+    {
+      "question": "What are the steps to connect a Spring Boot application to a database?",
+      "topic": "Spring Boot"
+    },
+    {
+      "question": "Write a REST API to handle a payload with an ID and implement complete CRUD mapping.",
+      "topic": "REST APIs"
+    },
+    {
+      "question": "What is the Saga design pattern in microservices? Explain with an example.",
+      "topic": "Microservices"
+    },
+    {
+      "question": "What is the CQRS (Command Query Responsibility Segregation) design pattern?",
+      "topic": "Design Patterns"
+    },
+    {
+      "question": "How do the WHERE and HAVING clauses differ in SQL?",
+      "topic": "SQL"
+    },
+    {
+      "question": "What is a self-join in SQL?",
+      "topic": "SQL"
+    },
+    {
+      "question": "How do an inner query and an outer query differ in a subquery?",
+      "topic": "SQL"
+    },
+    {
+      "question": "How do LEFT JOIN and RIGHT JOIN differ?",
+      "topic": "SQL"
+    },
+    {
+      "question": "How do @Component and @Primary differ in Spring Boot?",
+      "topic": "Spring Boot"
+    },
+    {
+      "question": "How do you implement an AuthGuard in Angular to secure routes?",
+      "topic": "Angular"
+    }
+  ]
+}

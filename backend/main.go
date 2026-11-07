@@ -280,13 +280,8 @@ func (a *app) browse(w http.ResponseWriter, r *http.Request) {
  SELECT 1 FROM question q WHERE q.interview_id=i.id
  AND ($4='[]' OR lower(q.topic) IN (SELECT jsonb_array_elements_text($4::jsonb)))
  AND interview_search_matches($5,concat_ws(' ',i.field,i.company,i.role,q.question,q.topic))))`
-	var total int64
-	if err := a.db.QueryRowContext(r.Context(), "SELECT count(*) FROM interview i"+where, args...).Scan(&total); err != nil {
-		a.internal(w, err)
-		return
-	}
 	args = append(args, page*12)
-	rows, err := a.db.QueryContext(r.Context(), `SELECT i.id,i.company,i.role,i.experience,i.interview_type,COALESCE(to_char(i.interview_date,'YYYY-MM-DD'),''),i.location,i.field,
+	rows, err := a.db.QueryContext(r.Context(), `SELECT count(*) OVER(),i.id,i.company,i.role,i.experience,i.interview_type,COALESCE(to_char(i.interview_date,'YYYY-MM-DD'),''),i.location,i.field,
  COALESCE((SELECT json_agg(json_build_object('id',q.id,'question',q.question,'topic',q.topic,'topicSource',q.topic_source) ORDER BY q.position,q.id) FROM question q WHERE q.interview_id=i.id AND ($4='[]' OR lower(q.topic) IN (SELECT jsonb_array_elements_text($4::jsonb))) AND ($5='' OR interview_search_matches($5,concat_ws(' ',i.field,i.company,i.role,q.question,q.topic)))),'[]'::json)
  FROM interview i`+where+` ORDER BY i.interview_date DESC NULLS LAST,i.id DESC LIMIT 12 OFFSET $9`, args...)
 	if err != nil {
@@ -295,10 +290,11 @@ func (a *app) browse(w http.ResponseWriter, r *http.Request) {
 	}
 	defer rows.Close()
 	items := []interview{}
+	var total int64
 	for rows.Next() {
 		var i interview
 		var qs []byte
-		if err = rows.Scan(&i.ID, &i.Company, &i.Role, &i.Experience, &i.Type, &i.Date, &i.Location, &i.Field, &qs); err == nil {
+		if err = rows.Scan(&total, &i.ID, &i.Company, &i.Role, &i.Experience, &i.Type, &i.Date, &i.Location, &i.Field, &qs); err == nil {
 			err = json.Unmarshal(qs, &i.Questions)
 		}
 		if err != nil {
@@ -310,6 +306,12 @@ func (a *app) browse(w http.ResponseWriter, r *http.Request) {
 	if err = rows.Err(); err != nil {
 		a.internal(w, err)
 		return
+	}
+	if len(items) == 0 {
+		if err := a.db.QueryRowContext(r.Context(), "SELECT count(*) FROM interview i"+where, args[:len(args)-1]...).Scan(&total); err != nil {
+			a.internal(w, err)
+			return
+		}
 	}
 	output(w, 200, map[string]any{"items": items, "total": total, "page": page, "pageSize": 12})
 }

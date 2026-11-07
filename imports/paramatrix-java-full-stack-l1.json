@@ -1,0 +1,39 @@
+{
+  "company": "Paramatrix Technologies Pvt Ltd",
+  "role": "Java Full Stack Developer — L1",
+  "field": "Technology",
+  "experience": "3–5",
+  "interviewType": "L1 Technical",
+  "interviewDate": "",
+  "location": "",
+  "questions": [
+    {
+      "question": "Explain your recent project architecture, the technologies you used (Java version, Spring Boot, Angular, database), your role and responsibilities, whether you handled production deployments, and how you addressed performance issues or production bugs.",
+      "topic": "Project Experience"
+    },
+    {
+      "question": "Given the array {2,3,4,5,6,1,2,3,6,7,8,9,8}, write a Java program to find the second-highest number using both a traditional approach without Java 8 and the Java 8 Stream API.",
+      "topic": "Java Coding"
+    },
+    {
+      "question": "Given Parent.display() with protected visibility and Child.display() with default visibility, will the code compile? Can an overriding method reduce visibility? Explain method overriding rules and what happens when the return type changes.",
+      "topic": "Java OOP"
+    },
+    {
+      "question": "Which Java versions have you worked with (such as Java 8, 11, 17 or 21)? Describe major features introduced in Java 8 and improvements in Java 17 or 21, and whether you have migrated a project to a newer Java version.",
+      "topic": "Core Java"
+    },
+    {
+      "question": "Which Spring Boot versions are compatible with Java 17 and Java 21? What steps are required to upgrade a project, including Maven or Gradle configuration, dependencies, compiler settings and deprecated API handling?",
+      "topic": "Spring Boot"
+    },
+    {
+      "question": "Which Angular version have you used? Does the Angular version depend on the Java backend version, and how do you ensure compatibility between an Angular frontend and Spring Boot backend?",
+      "topic": "Angular"
+    },
+    {
+      "question": "Write a SQL query to find the eighth-highest salary in an Employee table using a subquery and using DENSE_RANK() or ROW_NUMBER(). Explain how to handle duplicate salary values.",
+      "topic": "SQL"
+    }
+  ]
+}

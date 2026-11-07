@@ -1,0 +1,47 @@
+{
+  "company": "Tata Consultancy Services (TCS)",
+  "role": "Java Full Stack Developer",
+  "field": "Technology",
+  "experience": "",
+  "interviewType": "Walk-in",
+  "interviewDate": "",
+  "location": "Electronic City, Bangalore",
+  "questions": [
+    {
+      "question": "Tell me about yourself and the projects you have worked on.",
+      "topic": "Project Experience"
+    },
+    {
+      "question": "What is ExecutorService in Java?",
+      "topic": "Java Concurrency"
+    },
+    {
+      "question": "Compare virtual threads and platform threads.",
+      "topic": "Java Concurrency"
+    },
+    {
+      "question": "How do you secure a Java application?",
+      "topic": "Spring Security"
+    },
+    {
+      "question": "Compare JWT and OAuth tokens. Which would you prefer to use, and why?",
+      "topic": "Spring Security"
+    },
+    {
+      "question": "What is the difference between volatile and synchronized in Java?",
+      "topic": "Java Concurrency"
+    },
+    {
+      "question": "Write a program to count the characters in the string s1 = \"This is my Java Program\".",
+      "topic": "Core Java"
+    },
+    {
+      "question": "A production banking application has a slight delay while loading. How would you debug it?",
+      "topic": "Production Troubleshooting"
+    },
+    {
+      "question": "Write a Java 8 Stream program to select even numbers and multiply them by 5.",
+      "topic": "Java Streams"
+    }
+  ]
+}

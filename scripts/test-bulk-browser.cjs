@@ -17,7 +17,7 @@ const {chromium} = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
    await page.goto('http://bulk.test/'); await page.locator('#share').click();
    await page.locator('#bulk-entry summary').click();
    await page.locator('#bulk-topic').fill('Java');
-   const list = '[6:00 pm, 27/8/2026] +91 77690 64333: Hello sharing questions👇\n[6:00 pm, 27/8/2026] +91 77690 64333: Deloitte Internal Project interview Questions -\n\n' + Array.from({length:30},(_,i)=>`${i+1}.${i<9?' ':''}Question ${i+1}?${i===4?'\nContinuation of question five.':''}`).join('\n');
+   const list = 'Sharing questions\nDeloitte Internal Project interview Questions -\n\n' + Array.from({length:30},(_,i)=>`${i+1}.${i<9?' ':''}Question ${i+1}?${i===4?'\nContinuation of question five.':''}`).join('\n');
    await page.locator('#bulk-questions').fill(list); await page.locator('#import-questions').click();
    assert.equal(await page.locator('[data-question]').count(),30);
    assert.equal(await page.locator('[data-question]').nth(4).inputValue(),'Question 5?\nContinuation of question five.');
@@ -34,6 +34,6 @@ const {chromium} = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
    assert.ok(await page.evaluate(()=>document.querySelector('#submission').scrollWidth <= document.querySelector('#submission').clientWidth+1));
    assert.deepEqual(errors,[]); await page.close();
   }
-  console.log('Bulk entry passed: WhatsApp headers, 30 numbered questions, continuation lines, topics, append, limits, bullets, mobile and desktop.');
+  console.log('Bulk entry passed: numbered questions, continuation lines, topics, append, limits, bullets, mobile and desktop.');
  } finally {await browser.close();}
 })().catch(error => {console.error(error);process.exit(1);});

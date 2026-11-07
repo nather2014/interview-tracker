@@ -31,6 +31,15 @@ CREATE TABLE IF NOT EXISTS visitor_presence (
  PRIMARY KEY (visit_day, visitor_id)
 );
 
+-- Keep daily totals after individual visitor hashes are removed.
+CREATE TABLE IF NOT EXISTS visitor_daily (
+ visit_day DATE PRIMARY KEY,
+ visitors BIGINT NOT NULL CHECK (visitors >= 0)
+);
+INSERT INTO visitor_daily (visit_day, visitors)
+ SELECT visit_day, count(*) FROM visitor_presence GROUP BY visit_day
+ ON CONFLICT (visit_day) DO UPDATE SET visitors = GREATEST(visitor_daily.visitors, EXCLUDED.visitors);
+
 CREATE EXTENSION IF NOT EXISTS pg_trgm WITH SCHEMA public;
 CREATE OR REPLACE FUNCTION interview_search_matches(query text, document text)
 RETURNS boolean LANGUAGE sql IMMUTABLE PARALLEL SAFE AS $search$
